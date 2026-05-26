@@ -14,7 +14,7 @@ const INVITATION_CONFIG = {
     timeDisplay: "17:00 ЧАСА",
     venueLine1: "КЪЩА ЗА ГОСТИ",
     venueLine2: "„БАЛКАНСКИ КЪТ“",
-    venueLine3: "С. МЕЧКОВИЦА",
+    venueLine3: "КВ. ГАЧЕВЦИ · С. МЕЧКОВИЦА",
     /** Опционална снимка под поканата — задай showPhoto: true */
     showPhoto: false,
     photo: "assets/photo.svg",
@@ -26,7 +26,7 @@ const INVITATION_CONFIG = {
     date: "30 май 2026 · Събота",
     time: "17:00 ч.",
     location: "Къща за гости „Балкански кът“",
-    address: "с. Мечковица, община Габрово",
+    address: "кв. Гачевци, с. Мечковица, 5300 Габрово",
   },
 
   map: {
@@ -34,10 +34,12 @@ const INVITATION_CONFIG = {
     lead: "Ще те очаквам с нетърпение",
     venueName: "Къща за гости „Балкански кът“",
     venueShort: "Балкански кът · Мечковица",
-    addressFull: "с. Мечковица, община Габрово",
-    latitude: 42.85,
-    longitude: 25.25,
-    placeQuery: "Kashta za gosti Balkanski kat Mechkovitsa Gabrovo",
+    addressFull: "кв. Гачевци, с. Мечковица, 5300 Габрово",
+    /** Пълен адрес за Google Maps навигация */
+    destination: "къща за гости Балкански кът, кв. Гачевци, с. Мечковица, 5300 Габрово, България",
+    latitude: 42.848,
+    longitude: 25.238,
+    placeQuery: "къща за гости Балкански кът кв. Гачевци с. Мечковица 5300 Габрово",
   },
 
   navigation: {

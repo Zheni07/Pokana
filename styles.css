@@ -377,6 +377,7 @@ a {
   gap: 0.5rem;
   margin-top: 1.5rem;
   padding: 0.65rem 1.25rem;
+  font-family: var(--font-serif);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -384,6 +385,7 @@ a {
   color: var(--bronze-dark);
   border: 1px solid rgba(201, 169, 98, 0.55);
   background: rgba(255, 252, 248, 0.8);
+  cursor: pointer;
   transition: transform 0.35s var(--ease-luxury), box-shadow 0.35s, border-color 0.35s;
 }
 
