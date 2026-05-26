@@ -1,0 +1,94 @@
+/**
+ * ═══════════════════════════════════════════════════════════════
+ *  РЕДАКТИРАЙ СЪДЪРЖАНИЕТО ТУК — всичко на едно място
+ * ═══════════════════════════════════════════════════════════════
+ */
+const INVITATION_CONFIG = {
+  hero: {
+    title: "ПОКАНА",
+    pretitle: "ЗА АБИТУРИЕНТСКИ БАЛ НА",
+    name: "Жени Живкова",
+    weekday: "СЪБОТА",
+    day: "30",
+    month: "май",
+    timeDisplay: "17:00 ЧАСА",
+    venueLine1: "КЪЩА ЗА ГОСТИ",
+    venueLine2: "„БАЛКАНСКИ КЪТ“",
+    venueLine3: "С. МЕЧКОВИЦА",
+    /** Опционална снимка под поканата — задай showPhoto: true */
+    showPhoto: false,
+    photo: "assets/photo.svg",
+  },
+
+  event: {
+    title: "За събитието",
+    lead: "Всичко, което трябва да знаеш",
+    date: "30 май 2026 · Събота",
+    time: "17:00 ч.",
+    location: "Къща за гости „Балкански кът“",
+    address: "с. Мечковица, община Габрово",
+  },
+
+  map: {
+    title: "Локация",
+    lead: "Ще те очаквам с нетърпение",
+    venueName: "Къща за гости „Балкански кът“",
+    venueShort: "Балкански кът · Мечковица",
+    addressFull: "с. Мечковица, община Габрово",
+    latitude: 42.85,
+    longitude: 25.25,
+    placeQuery: "Kashta za gosti Balkanski kat Mechkovitsa Gabrovo",
+  },
+
+  navigation: {
+    heroCta: "Навигация до мястото",
+    cardLink: "Стартирай навигация ↓",
+    badge: "GPS навигация",
+    hint: "Натисни бутона — ще използваме текущата ти локация и ще отворим Google Maps с маршрут до къщата за гости.",
+    buttonFromHere: "Навигирай от моята локация",
+    buttonViewMap: "Виж само дестинацията",
+    buttonWaze: "Отвори в Waze",
+    mapLabel: "Карта на мястото",
+    distanceLabel: "Приблизително разстояние от теб:",
+    stickyLabel: "До бала",
+    stickyButton: "Навигирай",
+    statusIdle: "Готови сме да маршрутираме до къщата за гости.",
+    statusLoading: "Определяме твоята локация…",
+    statusSuccess: "Отваряме Google Maps с маршрут от твоята позиция.",
+    statusDenied: "Няма достъп до локацията. Разреши GPS в браузъра или използвай „Виж само дестинацията“.",
+    statusUnavailable: "Локацията не е налична. Опитай отново или отвори картата по-долу.",
+  },
+
+  countdown: {
+    title: "Остава време",
+    lead: "До най-красивата вечер",
+    targetDate: "2026-05-30T17:00:00",
+  },
+
+  gallery: {
+    title: "Спомени",
+    lead: "Моменти от пътя до бала",
+    images: [
+      { src: "assets/gallery-1.svg", alt: "Спомен 1" },
+      { src: "assets/gallery-2.svg", alt: "Спомен 2" },
+      { src: "assets/gallery-3.svg", alt: "Спомен 3" },
+      { src: "assets/gallery-4.svg", alt: "Спомен 4" },
+      { src: "assets/gallery-5.svg", alt: "Спомен 5" },
+      { src: "assets/gallery-6.svg", alt: "Спомен 6" },
+    ],
+  },
+
+  footer: {
+    message: "С любов и нетърпение те очаквам. До скоро!",
+    signature: "— Жени",
+    year: "© 2026 Жени Живкова",
+    instagram: "https://instagram.com/",
+    facebook: "https://facebook.com/",
+    tiktok: "https://tiktok.com/",
+  },
+
+  music: {
+    src: "assets/music.mp3",
+    enabledByDefault: false,
+  },
+};
