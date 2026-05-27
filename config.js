@@ -5,7 +5,7 @@
  */
 window.INVITATION_CONFIG = {
   hero: {
-    title: "ПОКАНА",
+    title: "НАПОМНЯНЕ",
     pretitle: "ЗА АБИТУРИЕНТСКИ БАЛ НА",
     name: "Жени Живкова",
     weekday: "СЪБОТА",
