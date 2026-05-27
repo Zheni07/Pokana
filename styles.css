@@ -216,7 +216,7 @@ a {
   font-family: var(--font-display);
   font-size: clamp(2rem, 8vw, 3rem);
   font-weight: 250;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.10em;
   color: var(--bronze);
   margin-bottom: 0.5rem;
   line-height: 1;
