@@ -15,9 +15,6 @@ window.INVITATION_CONFIG = {
     venueLine1: "КЪЩА ЗА ГОСТИ",
     venueLine2: "„БАЛКАНСКИ КЪТ“",
     venueLine3: "КВ. ГАЧЕВЦИ · С. МЕЧКОВИЦА",
-    /** Опционална снимка под поканата — задай showPhoto: true */
-    showPhoto: false,
-    photo: "assets/photo.svg",
   },
 
   event: {
@@ -68,11 +65,8 @@ window.INVITATION_CONFIG = {
   },
 
   footer: {
-    message: "С любов и нетърпение те очаквам. До скоро!",
+    message: "С любов и нетърпение ви очаквам. До скоро!",
     signature: "— Жени",
     year: "© 2026 Жени Живкова",
-    instagram: "https://instagram.com/",
-    facebook: "https://facebook.com/",
-    tiktok: "https://tiktok.com/",
   },
 };
