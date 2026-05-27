@@ -56,14 +56,9 @@
 
           <address class="invitation-card__venue">
             <span data-edit="hero.venueLine1">КЪЩА ЗА ГОСТИ</span>
-            <span data-edit="hero.venueLine2">„БАЛКАНСКИ КЪТ“</span>
+            <span data-edit="hero.venueLine2">„БАЛКАНСКИ КЪТ"</span>
             <span data-edit="hero.venueLine3">КВ. ГАЧЕВЦИ · С. МЕЧКОВИЦА</span>
           </address>
-
-          <button type="button" class="invitation-card__nav-cta" id="navHeroBtn" data-nav-start>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span data-edit="navigation.heroCta">Навигация до мястото</span>
-          </button>
         </div>
       </div>
     </article>
@@ -110,73 +105,9 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <h3 class="info-card__label">Локация</h3>
-            <p class="info-card__value" data-edit="event.location">Къща за гости „Балкански кът“</p>
+            <p class="info-card__value" data-edit="event.location">Къща за гости „Балкански кът"</p>
             <p class="info-card__detail" data-edit="event.address">кв. Гачевци, с. Мечковица, 5300 Габрово</p>
-            <a href="#navigation" class="info-card__link" data-edit="navigation.cardLink">Стартирай навигация ↓</a>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--map" id="location">
-      <div class="container">
-        <header class="section__header reveal">
-          <span class="section__ornament" aria-hidden="true">✦</span>
-          <h2 class="section__title" data-edit="map.title">Локация</h2>
-          <p class="section__lead" data-edit="map.lead">Ще те очаквам с нетърпение</p>
-        </header>
-
-        <div class="nav-panel glass reveal" id="navigation">
-          <div class="nav-panel__badge" data-edit="navigation.badge">GPS навигация</div>
-
-          <div class="nav-panel__destination">
-            <div class="nav-panel__pin" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <h3 class="nav-panel__name" data-edit="map.venueName">Къща за гости „Балкански кът“</h3>
-              <p class="nav-panel__address" data-edit="map.addressFull">кв. Гачевци, с. Мечковица, 5300 Габрово</p>
-            </div>
-          </div>
-
-          <p class="nav-panel__hint" data-edit="navigation.hint">
-            Натисни бутона по-долу — ще използваме текущата ти локация и ще отворим Google Maps с маршрут до къщата за гости.
-          </p>
-
-          <button type="button" class="btn btn--nav-primary" id="navFromLocation" data-nav-start>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
-            <span data-edit="navigation.buttonFromHere">Навигирай от моята локация</span>
-          </button>
-
-          <p class="nav-panel__status" id="navStatus" role="status" aria-live="polite"></p>
-
-          <div class="nav-panel__distance" id="navDistance" hidden>
-            <span class="nav-panel__distance-label" data-edit="navigation.distanceLabel">Разстояние от теб:</span>
-            <strong id="navDistanceValue">—</strong>
-          </div>
-
-          <div class="nav-panel__actions">
-            <a class="btn btn--nav-secondary" id="navigateBtn" href="#" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span data-edit="navigation.buttonViewMap">Виж само дестинацията</span>
-            </a>
-            <a class="btn btn--nav-secondary" id="navigateWaze" href="#" target="_blank" rel="noopener noreferrer" hidden>
-              <span data-edit="navigation.buttonWaze">Отвори в Waze</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="map-card glass reveal">
-          <div class="map-card__label" data-edit="navigation.mapLabel">Карта на мястото</div>
-          <div class="map-card__embed">
-            <iframe
-              id="mapEmbed"
-              title="Карта на локацията"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen
-            ></iframe>
-          </div>
         </div>
       </div>
     </section>
@@ -245,17 +176,6 @@
 
     <p class="footer__copy reveal" data-edit="footer.year">© 2026 Жени Живкова</p>
   </footer>
-
-  <aside class="nav-sticky" id="navSticky" aria-label="Бърза навигация">
-    <div class="nav-sticky__info">
-      <span class="nav-sticky__label" data-edit="navigation.stickyLabel">До бала</span>
-      <span class="nav-sticky__place" data-edit="map.venueShort">Балкански кът</span>
-    </div>
-    <button type="button" class="nav-sticky__btn" id="navStickyBtn" data-nav-start>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
-      <span data-edit="navigation.stickyButton">Навигирай</span>
-    </button>
-  </aside>
 
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Преглед на снимка" hidden>
     <button type="button" class="lightbox__close" id="lightboxClose" aria-label="Затвори">&times;</button>

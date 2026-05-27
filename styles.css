@@ -51,7 +51,6 @@ body {
   -webkit-tap-highlight-color: rgba(201, 169, 98, 0.25);
 }
 
-/* Anchor scroll — място за долната лента на телефон */
 #navigation,
 #event,
 #location {
@@ -59,7 +58,6 @@ body {
   scroll-margin-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
 }
 
-/* Watercolor background */
 body::before {
   content: "";
   position: fixed;
@@ -182,40 +180,55 @@ a {
   50% { box-shadow: 0 0 0 4px rgba(201, 169, 98, 0.2); }
 }
 
-/* ─── Hero florals (странични букети като на поканата) ─── */
+/* ─── Hero florals — УВЕЛИЧЕНИ ─── */
 .hero__floral {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: clamp(90px, 24vw, 175px);
-  height: clamp(280px, 55vh, 420px);
+  width: clamp(130px, 32vw, 240px);
+  height: clamp(340px, 65vh, 520px);
   background-image: url("assets/floral-bouquet.svg");
   background-repeat: no-repeat;
   background-size: contain;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.92;
+  opacity: 1;
 }
 
 .hero__floral--left {
-  left: max(0px, calc(50% - 280px));
+  left: max(0px, calc(50% - 320px));
   background-position: left center;
 }
 
 .hero__floral--right {
-  right: max(0px, calc(50% - 280px));
+  right: max(0px, calc(50% - 320px));
   transform: translateY(-50%) scaleX(-1);
   background-position: right center;
 }
 
 @media (max-width: 520px) {
   .hero__floral {
-    width: 72px;
-    opacity: 0.75;
+    width: clamp(90px, 22vw, 140px);
+    height: clamp(180px, 28vh, 240px);
+    opacity: 0.95;
+    top: 1.5rem;
+    transform: none;
+    background-position: center center;
   }
 
   .hero__floral--left { left: 0; }
-  .hero__floral--right { right: 0; }
+  .hero__floral--right { right: 0; transform: scaleX(-1); }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 3rem 1rem 4.5rem;
+    min-height: 100dvh;
+  }
+
+  .invitation-card {
+    width: min(100%, 100%);
+  }
 }
 
 /* ─── Hero & invitation card ─── */
@@ -401,7 +414,6 @@ a {
   box-shadow: var(--shadow-soft);
 }
 
-/* Опционална снимка под поканата */
 .hero-photo {
   margin-top: 2rem;
   z-index: 3;
@@ -493,7 +505,6 @@ a {
   color: var(--text-light);
 }
 
-/* Glass cards */
 .glass {
   background: var(--white-glass);
   backdrop-filter: blur(20px);
@@ -583,372 +594,6 @@ a {
 .info-card__link:hover {
   color: var(--bronze-dark);
   border-color: var(--champagne);
-}
-
-/* ─── Navigation panel ─── */
-.section--map {
-  background: linear-gradient(180deg, transparent, rgba(243, 235, 224, 0.35) 30%, transparent);
-}
-
-.nav-panel {
-  position: relative;
-  padding: clamp(1.75rem, 5vw, 2.5rem);
-  margin-bottom: 1.5rem;
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(201, 169, 98, 0.4);
-  overflow: hidden;
-}
-
-.nav-panel::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--gold-light), var(--champagne), var(--gold-light));
-}
-
-.nav-panel__badge {
-  display: inline-block;
-  margin-bottom: 1.25rem;
-  padding: 0.35rem 0.85rem;
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--bronze-dark);
-  background: rgba(201, 169, 98, 0.2);
-  border: 1px solid rgba(201, 169, 98, 0.35);
-  border-radius: 100px;
-}
-
-.nav-panel__destination {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  text-align: left;
-  margin-bottom: 1.25rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid rgba(201, 169, 98, 0.25);
-}
-
-.nav-panel__pin {
-  flex-shrink: 0;
-  width: 3rem;
-  height: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--champagne), var(--gold));
-  color: #fff;
-  box-shadow: var(--shadow-glow);
-}
-
-.nav-panel__pin svg {
-  width: 1.35rem;
-  height: 1.35rem;
-}
-
-.nav-panel__name {
-  font-family: var(--font-serif);
-  font-size: clamp(1.2rem, 4vw, 1.45rem);
-  font-weight: 600;
-  color: var(--brown);
-  margin-bottom: 0.25rem;
-  line-height: 1.3;
-}
-
-.nav-panel__address {
-  font-size: 1rem;
-  color: var(--text-light);
-  font-style: italic;
-}
-
-.nav-panel__hint {
-  font-size: 0.95rem;
-  color: var(--text);
-  line-height: 1.65;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.btn--nav-primary {
-  width: 100%;
-  justify-content: center;
-  padding: 1.1rem 1.5rem;
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  color: #fff;
-  background: linear-gradient(135deg, #d4b06a 0%, var(--champagne) 40%, var(--gold) 100%);
-  border: none;
-  border-radius: 100px;
-  box-shadow: var(--shadow-glow);
-  cursor: pointer;
-  font-family: var(--font-serif);
-  text-transform: uppercase;
-}
-
-.btn--nav-primary svg {
-  width: 1.15rem;
-  height: 1.15rem;
-  animation: spin-slow 8s linear infinite;
-}
-
-.btn--nav-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 36px rgba(184, 149, 106, 0.45);
-}
-
-.btn--nav-primary.is-loading {
-  opacity: 0.85;
-  pointer-events: none;
-}
-
-.btn--nav-primary.is-loading svg {
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-@keyframes spin-slow {
-  to { transform: rotate(360deg); }
-}
-
-.nav-panel__status {
-  min-height: 1.5rem;
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  text-align: center;
-  color: var(--text-light);
-  line-height: 1.5;
-}
-
-.nav-panel__status.is-loading {
-  color: var(--bronze);
-}
-
-.nav-panel__status.is-success {
-  color: #5a7a52;
-}
-
-.nav-panel__status.is-error {
-  color: #9a5c4a;
-}
-
-.nav-panel__distance {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 0.75rem;
-  padding: 0.65rem 1rem;
-  background: rgba(201, 169, 98, 0.12);
-  border-radius: 8px;
-  font-size: 0.95rem;
-}
-
-.nav-panel__distance strong {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  color: var(--bronze-dark);
-}
-
-.nav-panel__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: center;
-  margin-top: 1.25rem;
-}
-
-.btn--nav-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.7rem 1.25rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--bronze);
-  background: transparent;
-  border: 1px solid rgba(201, 169, 98, 0.5);
-  border-radius: 100px;
-  transition: background 0.35s, border-color 0.35s, transform 0.35s;
-}
-
-.btn--nav-secondary svg {
-  width: 0.95rem;
-  height: 0.95rem;
-}
-
-.btn--nav-secondary:hover {
-  background: rgba(201, 169, 98, 0.12);
-  border-color: var(--champagne);
-  transform: translateY(-1px);
-}
-
-/* Sticky navigation bar (mobile) */
-.nav-sticky {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 90;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.85rem 1.25rem calc(0.85rem + env(safe-area-inset-bottom, 0px));
-  background: rgba(255, 252, 248, 0.94);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-top: 1px solid rgba(201, 169, 98, 0.35);
-  box-shadow: 0 -8px 32px rgba(92, 74, 58, 0.12);
-}
-
-.nav-sticky__info {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
-
-.nav-sticky__label {
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--text-light);
-}
-
-.nav-sticky__place {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--brown);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.nav-sticky__btn {
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.75rem 1.25rem;
-  font-family: var(--font-serif);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #fff;
-  background: linear-gradient(135deg, var(--champagne), var(--gold));
-  border: none;
-  border-radius: 100px;
-  cursor: pointer;
-  box-shadow: var(--shadow-glow);
-  transition: transform 0.3s;
-}
-
-.nav-sticky__btn svg {
-  width: 1rem;
-  height: 1rem;
-}
-
-.nav-sticky__btn:hover {
-  transform: scale(1.03);
-}
-
-.nav-sticky__btn.is-loading {
-  opacity: 0.8;
-  pointer-events: none;
-}
-
-.nav-sticky {
-  transition: transform 0.35s var(--ease-luxury), opacity 0.35s;
-}
-
-.nav-sticky--hidden {
-  transform: translateY(110%);
-  opacity: 0;
-  pointer-events: none;
-}
-
-/* padding-bottom за sticky bar — само на телефон (виж @media долу) */
-
-/* ─── Map ─── */
-.map-card {
-  overflow: hidden;
-  border-radius: var(--radius-lg);
-  position: relative;
-}
-
-.map-card__label {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  z-index: 2;
-  padding: 0.4rem 0.85rem;
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  background: rgba(255, 252, 248, 0.92);
-  border: 1px solid rgba(201, 169, 98, 0.35);
-  color: var(--bronze-dark);
-}
-
-.map-card__embed {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  background: var(--beige);
-}
-
-.map-card__embed iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  filter: saturate(0.85) sepia(0.08);
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.85rem 2rem;
-  font-family: var(--font-serif);
-  font-size: 0.9rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: transform 0.4s var(--ease-luxury), box-shadow 0.4s, background 0.4s;
-}
-
-.btn svg {
-  width: 1rem;
-  height: 1rem;
-  transition: transform 0.4s var(--ease-luxury);
-}
-
-.btn--gold {
-  background: linear-gradient(135deg, var(--champagne), var(--gold));
-  color: #fff;
-  border: 1px solid var(--gold);
-  box-shadow: 0 4px 16px rgba(184, 149, 106, 0.35);
-}
-
-.btn--gold:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(184, 149, 106, 0.45);
-}
-
-.btn--gold:hover svg {
-  transform: translateX(4px);
 }
 
 /* ─── Countdown ─── */
@@ -1251,8 +896,104 @@ a {
 .reveal:nth-child(2) { transition-delay: 0.1s; }
 .reveal:nth-child(3) { transition-delay: 0.2s; }
 
+/* ─── Sticky nav (mobile) ─── */
+.nav-sticky {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1.25rem calc(0.85rem + env(safe-area-inset-bottom, 0px));
+  background: rgba(255, 252, 248, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(201, 169, 98, 0.35);
+  box-shadow: 0 -8px 32px rgba(92, 74, 58, 0.12);
+  transition: transform 0.35s var(--ease-luxury), opacity 0.35s;
+}
+
+.nav-sticky--hidden {
+  transform: translateY(110%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-sticky__info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.nav-sticky__label {
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+.nav-sticky__place {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--brown);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-sticky__btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(135deg, var(--champagne), var(--gold));
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  box-shadow: var(--shadow-glow);
+  transition: transform 0.3s;
+}
+
+.nav-sticky__btn svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.nav-sticky__btn:hover {
+  transform: scale(1.03);
+}
+
+.nav-sticky__btn.is-loading {
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* ─── Btn base ─── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 2rem;
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.4s var(--ease-luxury), box-shadow 0.4s, background 0.4s;
+}
+
 /* ═══════════════════════════════════════════════════════════════
-   МОБИЛНИ ТЕЛЕФОНИ — mobile-first оптимизации
+   МОБИЛНИ ТЕЛЕФОНИ
    ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 767px) {
   body {
@@ -1267,7 +1008,6 @@ a {
     padding: 3rem 1rem;
   }
 
-  /* Hero — пълен екран, без изрязване */
   .hero {
     min-height: 100svh;
     min-height: 100dvh;
@@ -1328,7 +1068,6 @@ a {
     font-size: 0.6rem;
   }
 
-  /* Пълноширинен бутон — лесен за натискане */
   .invitation-card__nav-cta {
     display: flex;
     width: 100%;
@@ -1339,11 +1078,10 @@ a {
     touch-action: manipulation;
   }
 
-  /* По-малки флорали — повече място за текста */
   .hero__floral {
-    width: 56px;
-    height: 45vh;
-    opacity: 0.5;
+    width: 85px;
+    height: 55vh;
+    opacity: 0.85;
   }
 
   .scroll-hint {
@@ -1358,7 +1096,6 @@ a {
     touch-action: manipulation;
   }
 
-  /* Info карти — по-удобни за четене */
   .info-card {
     padding: 1.5rem 1.25rem;
   }
@@ -1378,66 +1115,6 @@ a {
     touch-action: manipulation;
   }
 
-  /* Навигация — големи touch бутони */
-  .nav-panel {
-    padding: 1.35rem 1rem 1.5rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .nav-panel__hint {
-    font-size: 0.9rem;
-    text-align: left;
-    margin-bottom: 1.25rem;
-  }
-
-  .nav-panel__destination {
-    gap: 0.85rem;
-  }
-
-  .nav-panel__name {
-    font-size: 1.15rem;
-  }
-
-  .btn--nav-primary {
-    min-height: 3.25rem;
-    padding: 1rem 1.25rem;
-    font-size: 0.78rem;
-    letter-spacing: 0.1em;
-    touch-action: manipulation;
-    -webkit-user-select: none;
-    user-select: none;
-  }
-
-  .nav-panel__actions {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .btn--nav-secondary {
-    width: 100%;
-    justify-content: center;
-    min-height: 2.85rem;
-    touch-action: manipulation;
-  }
-
-  /* Карта — по-висока на телефон */
-  .map-card__embed {
-    aspect-ratio: 4 / 3;
-    min-height: 220px;
-  }
-
-  /* Countdown 2x2 */
-  .countdown__unit {
-    min-width: 0;
-    width: 100%;
-    padding: 1rem 0.5rem;
-  }
-
-  .countdown__number {
-    font-size: clamp(1.75rem, 9vw, 2.5rem);
-  }
-
-  /* Галерия — една колона на много тесни екрани */
   .gallery-grid {
     gap: 0.65rem;
   }
@@ -1446,7 +1123,6 @@ a {
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* Footer — място над sticky bar */
   .footer {
     padding: 3rem 1rem calc(2rem + env(safe-area-inset-bottom, 0px));
   }
@@ -1457,7 +1133,6 @@ a {
     touch-action: manipulation;
   }
 
-  /* Sticky bar — само мобилен */
   .nav-sticky {
     display: flex;
     padding:
@@ -1473,7 +1148,6 @@ a {
     touch-action: manipulation;
   }
 
-  /* Lightbox — големи бутони с пръст */
   .lightbox {
     padding: 1rem;
     padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
@@ -1502,22 +1176,13 @@ a {
     right: max(0.5rem, env(safe-area-inset-right, 0px));
   }
 
-  /* По-малко частици = по-плавно на телефон */
   .particles {
     opacity: 0.6;
   }
 
-  /* Без hover ефекти на touch екрани */
   .info-card:hover,
-  .btn--nav-primary:hover,
-  .btn--nav-secondary:hover,
   .gallery-item:hover img {
     transform: none;
-  }
-
-  .btn--nav-primary:active {
-    transform: scale(0.98);
-    opacity: 0.95;
   }
 
   .nav-sticky__btn:active {
@@ -1529,7 +1194,6 @@ a {
   }
 }
 
-/* Много тесни екрани (iPhone SE, малки Android) */
 @media (max-width: 360px) {
   .invitation-card__schedule {
     grid-template-columns: 1fr;
@@ -1560,7 +1224,6 @@ a {
   }
 }
 
-/* Desktop — без долна лента */
 @media (min-width: 768px) {
   .nav-sticky {
     display: none;
@@ -1577,7 +1240,6 @@ a {
   }
 }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1586,8 +1248,7 @@ a {
   .reveal,
   .invitation-card,
   .particle,
-  .scroll-hint,
-  .btn--nav-primary svg {
+  .scroll-hint {
     animation: none !important;
     transition: none !important;
   }
