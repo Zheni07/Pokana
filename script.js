@@ -198,9 +198,7 @@ function initNavigation(map, navTexts) {
   }
 
   /* Статичен бутон "Виж само дестинацията" */
-  const viewOnlyUrl = hasCoords
-    ? `https://www.google.com/maps/search/?api=1&query=${destLat},${destLng}`
-    : `https://www.google.com/maps/search/?api=1&query=${destEncoded}`;
+  const viewOnlyUrl = `https://www.google.com/maps/search/?api=1&query=${destEncoded}`;
 
   if (navBtn) navBtn.href = viewOnlyUrl;
 
@@ -263,7 +261,7 @@ function initNavigation(map, navTexts) {
 
         /* ── Построй URL с origin + destination ── */
         const origin = `${lat},${lng}`;
-        const dest   = hasCoords ? `${destLat},${destLng}` : destEncoded;
+        const dest   = destEncoded;
         const mapsUrl = `https://www.google.com/maps/dir/?api=1` +
                         `&origin=${encodeURIComponent(origin)}` +
                         `&destination=${dest}` +
