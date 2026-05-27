@@ -439,7 +439,7 @@ a {
 
 /* Reduce space between hero and the event section */
 .section--event {
-  padding-top: clamp(2rem, 6vw, 3rem);
+  padding-top: clamp(1rem, 3vw, 1.5rem);
 }
 
 .container {
