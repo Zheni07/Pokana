@@ -1030,8 +1030,17 @@ a {
   }
 
   .invitation-card__title {
-    letter-spacing: 0.18em;
-    font-size: clamp(2.1rem, 11vw, 2.75rem);
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 0.12em;
+    font-size: clamp(1.8rem, 10vw, 2.5rem);
+    line-height: 1.1;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    white-space: normal;
+    hyphens: auto;
+    padding-inline: 0.5rem;
   }
 
   .invitation-card__pretitle {
