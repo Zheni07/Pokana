@@ -262,7 +262,7 @@ function initNavigation(map, navTexts) {
                         `&destination=${dest}` +
                         `&travelmode=driving`;
 
-        window.open(mapsUrl, "_blank", "noopener");
+        window.location.href = mapsUrl;
       },
       (err) => {
         setLoading(false);
@@ -271,7 +271,7 @@ function initNavigation(map, navTexts) {
           : (navTexts?.statusUnavailable || "Локацията не е налична.");
         setStatus(msg, "error");
         /* fallback */
-        window.open(viewOnlyUrl, "_blank", "noopener");
+        window.location.href = viewOnlyUrl;
       },
       { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 }
     );
