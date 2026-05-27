@@ -3,7 +3,7 @@
  *  РЕДАКТИРАЙ СЪДЪРЖАНИЕТО ТУК — всичко на едно място
  * ═══════════════════════════════════════════════════════════════
  */
-const INVITATION_CONFIG = {
+window.INVITATION_CONFIG = {
   hero: {
     title: "ПОКАНА",
     pretitle: "ЗА АБИТУРИЕНТСКИ БАЛ НА",
@@ -67,19 +67,6 @@ const INVITATION_CONFIG = {
     targetDate: "2026-05-30T17:00:00",
   },
 
-  gallery: {
-    title: "Спомени",
-    lead: "Моменти от пътя до бала",
-    images: [
-      { src: "assets/gallery-1.svg", alt: "Спомен 1" },
-      { src: "assets/gallery-2.svg", alt: "Спомен 2" },
-      { src: "assets/gallery-3.svg", alt: "Спомен 3" },
-      { src: "assets/gallery-4.svg", alt: "Спомен 4" },
-      { src: "assets/gallery-5.svg", alt: "Спомен 5" },
-      { src: "assets/gallery-6.svg", alt: "Спомен 6" },
-    ],
-  },
-
   footer: {
     message: "С любов и нетърпение те очаквам. До скоро!",
     signature: "— Жени",
@@ -87,10 +74,5 @@ const INVITATION_CONFIG = {
     instagram: "https://instagram.com/",
     facebook: "https://facebook.com/",
     tiktok: "https://tiktok.com/",
-  },
-
-  music: {
-    src: "assets/music.mp3",
-    enabledByDefault: false,
   },
 };
