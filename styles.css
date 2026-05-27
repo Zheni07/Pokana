@@ -126,61 +126,6 @@ a {
   }
 }
 
-/* ─── Music toggle ─── */
-.music-toggle {
-  position: fixed;
-  top: 1.25rem;
-  right: 1.25rem;
-  z-index: 100;
-  width: 2.75rem;
-  height: 2.75rem;
-  border: 1px solid var(--gold-light);
-  border-radius: 50%;
-  background: var(--white-glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  color: var(--gold);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.4s var(--ease-luxury), box-shadow 0.4s var(--ease-luxury), border-color 0.4s;
-  box-shadow: var(--shadow-soft);
-}
-
-.music-toggle:hover {
-  transform: scale(1.06);
-  border-color: var(--champagne);
-  box-shadow: var(--shadow-card);
-}
-
-.music-toggle svg {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.music-toggle__icon--off {
-  display: none;
-}
-
-.music-toggle.is-muted .music-toggle__icon--on {
-  display: none;
-}
-
-.music-toggle.is-muted .music-toggle__icon--off {
-  display: block;
-}
-
-.music-toggle.is-playing {
-  animation: pulse-music 2s ease-in-out infinite;
-}
-
-@keyframes pulse-music {
-  0%, 100% { box-shadow: var(--shadow-soft); }
-  50% { box-shadow: 0 0 0 4px rgba(201, 169, 98, 0.2); }
-}
-
-
 @media (max-width: 640px) {
   .hero {
     padding: 1.5rem 1rem 2rem;
@@ -192,14 +137,15 @@ a {
     width: min(100%, 100%);
   }
 
-  .invitation-card__title {
-    letter-spacing: 0.14em;
-    font-size: clamp(2rem, 10vw, 3.25rem);
-    line-height: 1.05;
-    white-space: normal;
-    word-break: break-all;
-    overflow-wrap: anywhere;
-  }
+ .invitation-card__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 8vw, 3rem);
+  font-weight: 250;
+  letter-spacing: 0.14em;
+  color: var(--bronze);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
 
   .section {
     padding: clamp(1rem, 4vw, 2rem) 1rem;
@@ -268,9 +214,9 @@ a {
 
 .invitation-card__title {
   font-family: var(--font-display);
-  font-size: clamp(2.75rem, 10vw, 4rem);
-  font-weight: 500;
-  letter-spacing: 0.32em;
+  font-size: clamp(2rem, 8vw, 3rem);
+  font-weight: 250;
+  letter-spacing: 0.14em;
   color: var(--bronze);
   margin-bottom: 0.5rem;
   line-height: 1;
@@ -288,8 +234,8 @@ a {
 
 .invitation-card__name {
   font-family: var(--font-serif);
-  font-size: clamp(3rem, 10vw, 4.5rem);
-  font-weight: 600;
+  font-size: clamp(1.5rem, 5vw, 2.25rem);
+  font-weight: 300;
   line-height: 1.05;
   margin-bottom: 1.5rem;
   color: #7a5c3e;
