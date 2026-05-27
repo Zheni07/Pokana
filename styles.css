@@ -208,22 +208,25 @@ a {
 
 @media (max-width: 520px) {
   .hero__floral {
-    width: clamp(90px, 22vw, 140px);
-    height: clamp(180px, 28vh, 240px);
-    opacity: 0.95;
-    top: 1.5rem;
+    width: clamp(120px, 28vw, 170px);
+    height: clamp(220px, 34vh, 280px);
+    opacity: 1;
+    top: 1rem;
     transform: none;
-    background-position: center center;
+    background-position: center top;
+    background-size: contain;
+    filter: drop-shadow(0 4px 16px rgba(92, 74, 58, 0.18));
   }
 
-  .hero__floral--left { left: 0; }
-  .hero__floral--right { right: 0; transform: scaleX(-1); }
+  .hero__floral--left { left: -0.5rem; }
+  .hero__floral--right { right: -0.5rem; transform: scaleX(-1); }
 }
 
 @media (max-width: 640px) {
   .hero {
     padding: 3rem 1rem 4.5rem;
     min-height: 100dvh;
+    overflow: visible;
   }
 
   .invitation-card {
