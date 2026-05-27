@@ -96,7 +96,14 @@ function initCountdown(targetDateStr) {
     });
   }
   tick();
-  setInterval(tick, 1000);
+
+  function scheduleTick() {
+    const now = Date.now();
+    const delay = 1000 - (now % 1000);
+    setTimeout(() => { tick(); scheduleTick(); }, delay);
+  }
+
+  scheduleTick();
 }
 
 /* ── 6. Галерия + lightbox ── */
